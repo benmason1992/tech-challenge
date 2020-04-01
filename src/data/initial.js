@@ -1,3 +1,4 @@
 export default {
-    players: []
+    playerName: "",
+    players: [],
 }

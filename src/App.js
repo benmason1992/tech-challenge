@@ -6,12 +6,12 @@ import {
 } from "react-router-dom";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-import Add from "./Components/AddPlayer/Add"
+import Add from "./Components/AddPlayer/"
 import './App.css';
 
 const App = ( ) => (   
   <Router>
-      <Header>Play Ping Pong</Header>
+      <Header >Play Ping Pong</Header>
       <Add />
 
 
