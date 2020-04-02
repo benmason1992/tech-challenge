@@ -14,8 +14,8 @@ const mapStateToProps= (state) => {
 const mapDispatchToProps= (dispatch) => {
     return { 
         handlePlayerSubmit:(value) => {
-            dispatch(addName(value) );
+            dispatch(addName(value));
         },
     };
   }
-export default  connect(mapStateToProps,mapDispatchToProps)(Add); 
+export default connect(mapStateToProps,mapDispatchToProps)(Add); 

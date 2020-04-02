@@ -13,15 +13,14 @@ const Add = ({playerName, handlePlayerSubmit}) => {
             handlePlayerSubmit(inputPlayer1);
         }
     
-
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <div class="form-group">
-                    <label for="player1name">Who is this?</label>
-                    <input onChange={handleChange} value={inputPlayer1} class="form-control"></input>
+                <div className="form-group">
+                    <label>Whose Playing?</label>
+                    <input onChange={handleChange} value={inputPlayer1} className="form-control"></input>
                 </div>
-                <button type="submit" class="btn btn-success">Join in!</button>
+                <button type="submit" className="btn btn-success">Join in!</button>
             </form>
             
         </>

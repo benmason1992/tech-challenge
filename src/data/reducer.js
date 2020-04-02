@@ -1,10 +1,9 @@
 // import initial from "./initial";
 
 const players = (state, {playName}) => ({
-    ...state, 
     players: [
         ...state.players,
-        playName.playerName,
+        playName,
     ]});
 
 export default (state, action) => {
