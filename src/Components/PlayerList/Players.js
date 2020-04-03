@@ -7,7 +7,7 @@ const PlayerList = ({players}) => {
                 {players.map((player, index) => (
                     <li key={index}>{player.playerName}</li>
                 ))}
-            </ol>
+            </ol>   
         </div>
     );
 };

@@ -7,7 +7,6 @@ const Header = ({ children }) => (
         <h1>
         { children }
         </h1>
-        <h6>Add as many players as you like for the tournament!</h6>
     </Card.Header>
 );
 

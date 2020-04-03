@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Add = ({playerName, handlePlayerSubmit}) => {
+const Add = ({playerName, handlePlayerSubmit, players, competitors}) => {
 
     const [inputPlayer1, setInputPlayer1] = useState(playerName);
 
@@ -11,6 +11,7 @@ const Add = ({playerName, handlePlayerSubmit}) => {
     const handleSubmit= (e) => {
             e.preventDefault();
             handlePlayerSubmit(inputPlayer1);
+            setInputPlayer1("");
         }
     
     return (
@@ -20,7 +21,8 @@ const Add = ({playerName, handlePlayerSubmit}) => {
                     <label>Whose Playing?</label>
                     <input onChange={handleChange} value={inputPlayer1} className="form-control"></input>
                 </div>
-                <button type="submit" className="btn btn-success">Join in!</button>
+                {players.length < competitors ? <button type="submit" className="btn btn-success">Join in!</button> : null}
+                
             </form>
             
         </>

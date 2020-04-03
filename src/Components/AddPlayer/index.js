@@ -7,6 +7,7 @@ import {addName} from '../../data/action';
 
 const mapStateToProps= (state) => {
   return { 
+    ...state,
     playerName: state.playerName,
   };
 }
