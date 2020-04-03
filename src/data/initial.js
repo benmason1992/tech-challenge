@@ -1,6 +1,7 @@
 export default {
     playerName: "",
     players: [],
-    // validGame: false,
+    numberSelected: false,
     competitors: 2,
+    gameStarted: false,
 }

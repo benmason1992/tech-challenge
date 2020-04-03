@@ -10,7 +10,6 @@ const Settings = ({competitors, handleFormPlayersSubmit}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         handleFormPlayersSubmit(value);
-        console.log(setValue);
     }
 
     return (

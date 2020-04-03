@@ -14,11 +14,18 @@ export const settings = () => {
     }
 }
 
+export const startGame = () => {
+    return {
+        type: "START_GAME",
+        gameStarted: true,
+    }
+}
+
 export const saveSettings = (competitors) => {
-    console.log(competitors)
     return {
         type: "SAVE_SETTINGS",
         competitors: +competitors,
+        numberSelected: true,
     };
 };
 
