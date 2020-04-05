@@ -3,5 +3,5 @@ export default {
     players: [],
     numberSelected: false,
     competitors: 2,
-    gameStarted: false,
+    changePlayers: false,
 }

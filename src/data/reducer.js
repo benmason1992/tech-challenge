@@ -7,12 +7,6 @@ const players = (state, {playObj}) => ({
         playObj,
     ]});
 
-const winners = (state, {playObj}) => ({
-    ...state,
-    players: state.players,
-    playObj,
-}) 
-
 export default (state, action) => {
   
     switch (action.type) {
@@ -22,11 +16,7 @@ export default (state, action) => {
             playerName: initial.playerName,
             players: initial.players,
         }
-        case "SETTINGS" : return {
-            ...state, 
-            competitors: 2,
-            numberSelected: false,
-        }
+        
         case "SAVE_SETTINGS": return {
             ...state,
             competitors: action.competitors,
@@ -34,10 +24,9 @@ export default (state, action) => {
         }
         case "START_GAME": return {
             ...state,
-            gameStarted: true,
+            changePlayers: true,
             numberSelected: false,
         }
-        case "WINNER": return winners(state, action);
 
         default: return state;
     }

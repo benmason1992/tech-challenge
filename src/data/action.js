@@ -3,21 +3,15 @@ export const addName = (Name) => {
         type: 'ADD_NAME', 
         playObj: { 
             playerName: Name,
-            points: 0,
+            // points: 0, Was going to add points to the scores of players with a potential of tying in a back end, however i did not have time.
         }
     };
 };
 
-export const settings = () => {
-    return {
-        type: "SETTINGS"
-    };
-};
-
-export const startGame = () => {
+export const changeNumPlayers = () => {
     return {
         type: "START_GAME",
-        gameStarted: true,
+        changePlayers: true,
         numberSelected: false,
     };
 };

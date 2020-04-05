@@ -1,18 +1,18 @@
 import { connect } from "react-redux";
-import {startGame} from "../../data/action";
+import {changeNumPlayers} from "../../data/action";
 import PlayerList from "./Players";
 
 const mapStateToProps = (state) => {
   return {
     players: state.players,
-    gameStarted: state.gameStarted,
+    changePlayers: state.changePlayers,
     competitors: state.competitors,
   };
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    handleFormGameStart: (gameStarted) => dispatch(startGame(gameStarted)),
+    handleFormGameStart: (changePlayers) => dispatch(changeNumPlayers(changePlayers)),
   }
 }
 
