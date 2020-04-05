@@ -1,25 +1,26 @@
 export const addName = (Name) => {
     return {
         type: 'ADD_NAME', 
-        playName: { 
+        playObj: { 
             playerName: Name,
             points: 0,
         }
-    }
+    };
 };
 
 export const settings = () => {
     return {
         type: "SETTINGS"
-    }
-}
+    };
+};
 
 export const startGame = () => {
     return {
         type: "START_GAME",
         gameStarted: true,
-    }
-}
+        numberSelected: false,
+    };
+};
 
 export const saveSettings = (competitors) => {
     return {
@@ -32,5 +33,12 @@ export const saveSettings = (competitors) => {
 export const reset = () => {
     return {
         type: "RESET",
+    };
+};
+
+export const pointsWinner = () => {
+    return {
+        type: "WINNER",
+        points: + 1
     };
 };

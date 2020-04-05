@@ -9,19 +9,31 @@ import Footer from "../Footer";
 import Add from "../AddPlayer";
 import Reset from "../Reset";
 import Players from "../PlayerList";
-import Matches from "../Matches";
+import Rounds from "../Rounds";
 import Settings from "../Settings";
 import '../../App.css';
 
-const App = ({numberSelected}) => (
+const App = ({ numberSelected, gameStarted }) => (
   <Router>
     <Header >Play Ping Pong</Header>
-    {!numberSelected ? <Settings /> :
+    {!numberSelected ?
+      <Settings /> :
       <>
+
+
         <Add />
         <Reset />
         <Players />
-        <Matches />
+        <Rounds />
+
+        {/* {gameStarted ?
+          <Rounds />
+          :
+          <>
+            <Add />
+            <Reset />
+            <Players />
+          </> */}
       </>
     }
     <Footer />

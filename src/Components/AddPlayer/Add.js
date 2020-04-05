@@ -13,6 +13,7 @@ const Add = ({playerName, handlePlayerSubmit, players, competitors}) => {
             handlePlayerSubmit(inputPlayer1);
             setInputPlayer1("");
         }
+        console.log(competitors);
     
     return (
         <>

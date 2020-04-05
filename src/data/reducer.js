@@ -1,11 +1,17 @@
 import initial from "./initial";
 
-const players = (state, {playName}) => ({
+const players = (state, {playObj}) => ({
     ...state,
     players: [
         ...state.players,
-        playName,
+        playObj,
     ]});
+
+const winners = (state, {playObj}) => ({
+    ...state,
+    players: state.players,
+    playObj,
+}) 
 
 export default (state, action) => {
   
@@ -29,7 +35,9 @@ export default (state, action) => {
         case "START_GAME": return {
             ...state,
             gameStarted: true,
+            numberSelected: false,
         }
+        case "WINNER": return winners(state, action);
 
         default: return state;
     }

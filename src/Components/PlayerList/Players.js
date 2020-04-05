@@ -1,9 +1,11 @@
 import React,  { useState } from "react";
 
-const PlayerList = ({players, gameStarted, handleFormGameStart}) => {
+const PlayerList = ({players, gameStarted, handleFormGameStart, competitors}) => {
 
     const value = useState(gameStarted);
-
+    const playerLength = players.length;
+    console.log(playerLength);
+    console.log(competitors);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -17,7 +19,8 @@ const PlayerList = ({players, gameStarted, handleFormGameStart}) => {
                     <li key={index}>{player.playerName}</li>
                 ))}
             </ol>
-            <button onSubmit={handleSubmit} type="submit" className="btn btn-success">Start Game!</button>
+            {playerLength < competitors ? null : <button onClick={handleSubmit} type="submit" className="btn btn-success">Start Game!</button>}
+            
         </div>
 
     );
