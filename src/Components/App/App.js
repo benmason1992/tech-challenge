@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter as Router, //I was thinking about adding the browser router into the app however i decided to leave as a one page app.
+  HashRouter as Router, //I was thinking about adding the browser router into the app however i decided to leave as a one page app.
   // Route,
   // Switch,
 } from "react-router-dom";

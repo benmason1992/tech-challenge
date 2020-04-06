@@ -16,6 +16,7 @@ const Matches1 = ({ players, competitors, numberSelected, handlePlayerWinner }) 
     return (
         <>
             <section>
+                <h3>Click on the competitors names to advance through the rounds.</h3>
                 {competitors === 2 ? //Ternary to display the correct table dependant on the number of players.
 
                     <table>
